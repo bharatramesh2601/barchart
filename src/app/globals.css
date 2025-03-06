@@ -34,10 +34,19 @@ body {
 }
 
 .chart {
+  align-items: flex-end;
   border: 2px solid #2c3e50;
   border-right: 0;
   border-top: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
   width: 100%;
+  height: 100%;
+}
+
+.bar {
+  flex: 1;
   height: 100%;
 }
 
