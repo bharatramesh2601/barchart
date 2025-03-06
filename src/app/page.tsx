@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import BarChart from './barChart';
-
-// import CHART_DATA from './data'
+import CHART_DATA from './data';
 
 export default function Home() {
   const [showChart, setShowChart] = useState(false);
@@ -15,7 +14,7 @@ export default function Home() {
       > 
       Toggle Chart 
       </button>
-      { showChart ? <BarChart /> : null}
+      { showChart ? <BarChart data={CHART_DATA} /> : null}
 
     </main>
   );

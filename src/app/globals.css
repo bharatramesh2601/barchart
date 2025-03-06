@@ -19,4 +19,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.container button:active {
+  transform: scale(0.9);
 }
