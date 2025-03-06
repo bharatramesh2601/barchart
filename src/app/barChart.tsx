@@ -1,7 +1,9 @@
-const BarChart = () => {
+const BarChart = ({ data }) => {
     return (
-        <div>
-            Chart would be here...
+        <div className="chart-container">
+            <div className="chart"></div>
+            <div className="y-axis-label">No. of Tickets</div>
+            <div className="x-axis-label">Departments</div>
         </div>
     )
 }
