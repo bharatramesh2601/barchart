@@ -1,4 +1,5 @@
-import { useMemo } from "react"
+import { useMemo } from "react";
+import { motion } from "framer-motion";
 
 const Bar = ({
     name,
@@ -7,14 +8,21 @@ const Bar = ({
     height
 }) => {
     return (
-        <div 
+        <motion.div 
         className="bar"
+        initial={{ height: 0 }}
+        animate={{ height: `${height}%` }}
+        exit={{ height: 0 }}
         style={{
             height: `${height}%`,
             // height: `${ticketCount}%`,
             backgroundColor: color
         }}
-        />
+        >
+            <div className="tooltip">
+                {name} = {ticketCount}
+            </div>
+        </motion.div>
     )
 }
 
