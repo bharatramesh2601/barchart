@@ -6,11 +6,15 @@ import BarChart from './barChart';
 // import CHART_DATA from './data'
 
 export default function Home() {
-  const [showChart] = useState(false);
+  const [showChart, setShowChart] = useState(false);
 
   return (
     <main className='container'>
-      <button> Toggle Chart </button>
+      <button 
+      onClick={() => setShowChart(prev => !prev)}
+      > 
+      Toggle Chart 
+      </button>
       { showChart ? <BarChart /> : null}
 
     </main>
