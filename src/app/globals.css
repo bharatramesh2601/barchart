@@ -49,6 +49,7 @@ body {
 .bar {
   flex: 1;
   position: relative;
+  cursor: pointer;
 }
 
 .tooltip {

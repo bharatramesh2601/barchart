@@ -13,6 +13,7 @@ const Bar = ({
         initial={{ height: 0 }}
         animate={{ height: `${height}%` }}
         exit={{ height: 0 }}
+        transition={{ duration: 4 }}
         style={{
             height: `${height}%`,
             // height: `${ticketCount}%`,
@@ -31,7 +32,13 @@ const BarChart = ({ data }) => {
         return Math.max(...data.map(item => item.ticketCount));
     }, [])
     return (
-        <div className="chart-container">
+        <motion.div 
+            className="chart-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2 }}
+        >
             <div className="chart">
                 {
                     data.map(item => {
@@ -45,7 +52,7 @@ const BarChart = ({ data }) => {
             </div>
             <div className="y-axis-label">No. of Tickets</div>
             <div className="x-axis-label">Departments</div>
-        </div>
+        </motion.div>
     )
 }
 
